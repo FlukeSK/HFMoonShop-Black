@@ -9,7 +9,7 @@ exports.findUserByemailOrMobile = (emailOrMobile) =>
     },
   });
 
-exports.createUser = (data) => prisma.user.create({ data });
+exports.createUser = (data) => prisma.user.create({data:{...data,status:true}});
 
 exports.findUserById = (id) =>
   prisma.user.findUnique({
