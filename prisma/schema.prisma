@@ -22,7 +22,7 @@ model User {
   email     String?    @unique
   mobile    String?    @unique
   password  String
-  status    String     
+  status    Boolean
   Shopping  Shopping[]
 }
 

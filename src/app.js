@@ -21,5 +21,9 @@ app.use("/auth", authRoute);
 app.use(notFound);
 app.use(error);
 
+app.get("/home", (req, res) => {
+    res.send("Welcome to the home page! This page is public.");
+  });
+
 const PORT = process.env.PORT;
 app.listen(PORT, () => console.log("server running on port ", PORT));
